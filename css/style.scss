@@ -80,7 +80,6 @@ header{
                     font-size: 45px;
                     color: $text-color;
                     overflow-x: hidden;
-                    overflow-y: hidden;
                 }
             }
             .result{
@@ -112,7 +111,6 @@ header{
                 grid-template-rows: repeat(5 , 1fr);
                 gap: 5px;
             li{
-                height: 80%;
                 padding: 5px;
                 background-color: lighten($main-color , 8%);
                 border-radius: 20px;
@@ -120,6 +118,7 @@ header{
                 justify-content: center;
                 align-items: center;
                 transition: all 0.1s ease 0s;
+                overflow-wrap: break-word;
                 cursor: pointer;
                 span{
                     color: #fcfcfc;
@@ -145,12 +144,11 @@ header{
             .equal:hover{
                 background-color: $text-color;
                 color: $light-color;
-                // opacity: 90%;
                 filter: grayscale(30%);
             }
             li:hover{
                 box-shadow: none;
-                filter: grayscale(100%);
+                filter: grayscale(80%);
             }
             }
         }
@@ -174,22 +172,13 @@ header{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     header{
         .container{
-            width: 100%;
+            width: 90%;
             height: 95vh;
             border-radius: 0;
             padding: 10px 0px;
         }
     }
 }
-
-// @media (max-width: 700px){
-//     header{
-//         .container{
-
-//             height: 80vh;
-//         }
-//     }
-// }
