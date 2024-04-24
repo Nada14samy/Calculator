@@ -15,14 +15,14 @@
 
 <body>
     <header>
-        <div class="container mode">
+        <div class="container">
             <!-- alert text -->
             <span class="alert hiden"></span>
             <!-- end alert -->
             <!-- result -->
             <div class="total">
                 <div class="darkLightMode">
-                    <span><i onclick="darkLightMode()" class="fas fa-sun"></i></span>
+                    <span id="mode" onclick="LightMode(this.innerHTML)"><i class="fas fa-sun"></i></span>
                 </div>
                 <div class="string">
                     <span class="text"></span>
@@ -30,9 +30,9 @@
                 </div>
                 <div class="bottom">
                     <span class="del" onclick="DELOne()">DEL</span>
-                    <span class="storage">
+                    <!-- <span class="storage">
                         <i class="fa-regular fa-clock"></i>
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <hr />
@@ -108,7 +108,6 @@
             </div>
         </div>
     </header>
-
 
 
     <script src="./js/main.js"></script>

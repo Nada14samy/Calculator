@@ -32,8 +32,29 @@ function cal() {
     }
 }
 
-function darkLightMode() {
-    document.querySelector('.container').style.backgroundColor = '#fff';
-    document.querySelector('.total').style.backgroundColor = '#fff';
-    document.querySelector('.cul').style.backgroundColor = '#fff';
+
+
+// `<i class="fa-solid fa-moon" ></i>`
+if (localStorage.length > 0) {
+    document.querySelector('#mode').innerHTML = localStorage['lightMode'];
+    document.querySelector('.container').style.backgroundColor = localStorage['bgColor'];
+}
+
+function LightMode(mode){
+    let color;
+    if (mode == `<i class="fas fa-sun"></i>`) {
+        mode = `<i class="fa-solid fa-moon" ></i>`;
+        document.querySelector('#mode').innerHTML = mode;
+        localStorage.setItem('lightMode' , mode);
+        color = '#fcfcfc';
+        document.querySelector('.container').style.backgroundColor = color;
+        localStorage.setItem('bgColor' , color);
+    }else{
+        mode = `<i class="fas fa-sun"></i>`;
+        document.querySelector('#mode').innerHTML = mode;
+        localStorage.setItem('lightMode' , mode);
+        color = '#151434';
+        document.querySelector('.container').style.backgroundColor = color;
+        localStorage.setItem('bgColor' , color);
+    }
 }

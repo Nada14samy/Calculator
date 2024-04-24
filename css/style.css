@@ -25,7 +25,7 @@ header .container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 200px 1px 1fr;
-  box-shadow: 1px 1px 10px 5px rgba(49, 54, 63, 0.4431372549);
+  box-shadow: 1px 1px 9px 0px #151434;
   position: relative;
 }
 header .container .alert {
@@ -33,13 +33,13 @@ header .container .alert {
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: rgba(255, 170, 51, 0.288);
+  background-color: rgba(21, 20, 52, 0.6980392157);
   font-size: 17px;
   color: #fff;
   border-radius: 20px;
   position: absolute;
-  bottom: 80px;
-  left: 70px;
+  top: 150px;
+  left: 85px;
   padding: 10px;
 }
 header .container .hiden {
@@ -47,7 +47,6 @@ header .container .hiden {
 }
 header .container .total {
   width: 100%;
-  background-color: #151434;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 30px 140px 1fr;
@@ -58,11 +57,11 @@ header .container .total .darkLightMode {
 }
 header .container .total .darkLightMode span {
   font-size: 20px;
-  color: #fff;
+  color: #fa3;
   cursor: pointer;
 }
 header .container .total .darkLightMode span:hover {
-  color: #fa3;
+  color: #151434;
 }
 header .container .total .string {
   display: flex;
@@ -77,13 +76,13 @@ header .container .total .string .anime {
 }
 header .container .total .string .text {
   font-size: 45px;
-  color: #fff;
+  color: #fa3;
   overflow-x: hidden;
 }
 header .container .total .result {
   font-size: 35px;
   opacity: 70%;
-  color: #fa3;
+  color: rgb(11, 18, 21);
 }
 header .container .total .bottom {
   display: flex;
@@ -91,6 +90,7 @@ header .container .total .bottom {
   padding-inline: 15px;
   color: #fa3;
   font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
 }
 header .container .total .bottom .del:hover {
@@ -100,7 +100,6 @@ header .container .total .bottom .storage:hover {
   opacity: 70%;
 }
 header .container .cul {
-  background-color: #151434;
   padding: 10px 0px;
 }
 header .container .cul ul {
@@ -115,7 +114,6 @@ header .container .cul ul li {
   padding: 5px;
   background-color: #111029;
   border-radius: 50px;
-  box-shadow: 1px 1px 15px 0px rgba(255, 255, 255, 0.5490196078) inset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,7 +121,7 @@ header .container .cul ul li {
   cursor: pointer;
 }
 header .container .cul ul li span {
-  color: #fff;
+  color: #fcfcfc;
   font-size: 35px;
 }
 header .container .cul ul li .operator, header .container .cul ul li .deleteAll, header .container .cul ul li .square, header .container .cul ul li .percent, header .container .cul ul li .negative {
@@ -148,6 +146,7 @@ header .container .cul ul .equal:hover {
 }
 header .container .cul ul li:hover {
   box-shadow: none;
+  filter: grayscale(100%);
 }
 
 @keyframes text {
@@ -156,5 +155,16 @@ header .container .cul ul li:hover {
   }
   to {
     opacity: 0%;
+  }
+}
+@media (max-width: 350px) {
+  header .container {
+    width: 90%;
+    height: 90vh;
+  }
+}
+@media (max-width: 1200px) {
+  header .container {
+    height: 90vh;
   }
 }/*# sourceMappingURL=style.css.map */
