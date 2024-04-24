@@ -15,18 +15,19 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container mode">
             <!-- alert text -->
             <span class="alert hiden"></span>
             <!-- end alert -->
             <!-- result -->
             <div class="total">
+                <div class="darkLightMode">
+                    <span><i onclick="darkLightMode()" class="fas fa-sun"></i></span>
+                </div>
                 <div class="string">
-                    <span class="text" onkeypress="result()"></span>
+                    <span class="text"></span>
                     <div class="anime"></div>
                 </div>
-                
-                <div class="result"></div>
                 <div class="bottom">
                     <span class="del" onclick="DELOne()">DEL</span>
                     <span class="storage">
@@ -40,14 +41,14 @@
                     <li onclick="DeleteAll()">
                         <span class="deleteAll">C</span>
                     </li>
-                    <li>
-                        <span class="percent" onclick="textElement('%')">%</span>
+                    <li class="lightmode">
+                        <span class="operator" onclick="textElement('%')">%</span>
                     </li>
-                    <li>
+                    <li class="lightmode">
                         <span class="operator" onclick="textElement('/')">
                             <i class="fa-solid fa-divide"></i></span>
                     </li>
-                    <li>
+                    <li class="lightmode">
                         <span class="operator" onclick="textElement('*')">
                             <i class="fa-solid fa-xmark"></i>
                         </span>
@@ -61,7 +62,7 @@
                     <li>
                         <span onclick="textElement(this.textContent)">9</span>
                     </li>
-                    <li>
+                    <li class="lightmode">
                         <span class="operator" onclick="textElement('-')">
                             <i class="fa-solid fa-minus"></i>
                         </span>
@@ -75,7 +76,7 @@
                     <li>
                         <span onclick="textElement(this.textContent)">6</span>
                     </li>
-                    <li>
+                    <li class="lightmode">
                         <span class="operator" onclick="textElement('+')">
                             <i class="fa-solid fa-plus"></i>
                         </span>

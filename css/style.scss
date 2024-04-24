@@ -1,3 +1,16 @@
+// @import "varibal.scss";
+$main-color: #151434;
+$text-color: #fa3;
+$light-color: #fff;
+
+@function darkMode($color){
+    @if(lightness($color) > 70%){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -7,14 +20,17 @@
 header{
     width: 100%;
     height: 100vh;
-    background-color: #cccaca;
+    background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    .mode{
+        background-color: $light-color;
+    }
     .container{
         width: 300px;
         height: 85%;
-        background-color: #222831;
+        background-color: $main-color;
         padding: 15px;
         border-radius: 10px;
         display: grid;
@@ -27,7 +43,7 @@ header{
             height: fit-content;
             background-color: rgba(255, 170, 51, 0.288);
             font-size: 17px;
-            color: #fff;
+            color: $light-color;
             border-radius: 20px;
             position: absolute;
             bottom: 80px;
@@ -40,10 +56,23 @@ header{
         }
         .total{
             width: 100%;
-            background-color: #222831;
+            background-color: $main-color;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 85px 75px 1fr;
+            grid-template-rows: 30px 140px 1fr;
+
+            .darkLightMode{
+                display: flex;
+                justify-content: end;
+                span{
+                    font-size: 20px;
+                    color: $light-color;
+                    cursor: pointer;
+                    &:hover{
+                        color: $text-color;
+                    }
+                }
+            }
             
             .string{
                 display: flex;
@@ -51,27 +80,28 @@ header{
                 .anime{
                     width: 2px;
                     height: 50px;
-                    background-color: #fa3;
+                    background-color: $text-color;
                     animation: text 1.1s ease-in-out 0s infinite;
                     transition: all 0.5s ease-in-out 0s;
                 }
                 .text{
                     font-size: 45px;
-                    color: #fff;
+                    color: darkMode($main-color);
                     overflow-x: hidden;
                 }
             }
             .result{
                 font-size: 35px;
                 opacity: 70%;
-                color: #fa3;
+                color: $text-color;
             }
             .bottom{
                 display: flex;
                 justify-content: space-between;
                 padding-inline: 15px;
-                color: #fa3;
+                color: $text-color;
                 font-size: 18px;
+                cursor: pointer;
                 .del:hover{
                     opacity: 70%;
                 }
@@ -79,13 +109,10 @@ header{
                     opacity: 70%;
                 }
             }
-            .bottom:hover{
-                cursor: pointer;
-            }
-           
+            
         }
         .cul{
-            background-color: #222831;
+            background-color: $main-color;
             padding: 10px 0px;
             ul{
                 height: 100%;
@@ -96,41 +123,45 @@ header{
             li{
                 height: 80%;
                 padding: 5px;
-                background-color: #31363F;
+                background-color: darken($main-color , 3%);
                 border-radius: 50px;
-                box-shadow: 1px 1px 15px 0px #ffffff41 inset;
+                box-shadow: 1px 1px 15px 0px #ffffff8c inset;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transition: all 0.1s ease 0s;
+                cursor: pointer;
                 span{
-                    color: #fff;
+                    color: darkMode(darken($color: $main-color, $amount: 3%));
                     font-size: 35px;
                 }
                 .operator , .deleteAll , .square , .percent , .negative {
-                    color: #fa3;
+                    color: $text-color;
                 }
             }
+            
             .equal{
-                background-color: #fa3;
+                background-color: $text-color;
                 box-shadow: none;
-                color: #fff;
+                color: $light-color;
                 grid-row: 4/6;
                 grid-column: 4;
                 padding: 10px 0px;
                 margin: 0px 5px;
                 span{
-                    color: #fff;
+                    color: $light-color;
                 }
             }
             .equal:hover{
-                background-color: #fa3;
-                color: #fff;
+                background-color: $text-color;
+                color: $light-color;
                 opacity: 90%;
             }
+            // .operator{
+            //     background-color: darken($color: #fa3, $amount: 3%);
+            //     box-shadow: none;
+            // }
             li:hover{
-                cursor: pointer;
-                background-color: #31363F;
                 box-shadow: none;
             }
             }

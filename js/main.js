@@ -1,12 +1,7 @@
 // varible
 let text = document.getElementsByClassName('text')[0];
 let alertText = document.getElementsByClassName('alert')[0];
-console.log(alertText);
-// console.log(document.getElementsByClassName('square')[0].textContent);
-console.log(text.textContent.length);
 const el = document.querySelectorAll('span');
-console.log(el);
-
 let Result = document.querySelector('.result');
 
 function DeleteAll() {
@@ -36,6 +31,9 @@ function cal() {
         alertText.textContent = `تم إستخدام تنسيق غير صالح`;
     }
 }
-function result() {
-    Result.textContent = eval(text.textContent);
+
+function darkLightMode() {
+    document.querySelector('.container').style.backgroundColor = '#fff';
+    document.querySelector('.total').style.backgroundColor = '#fff';
+    document.querySelector('.cul').style.backgroundColor = '#fff';
 }
