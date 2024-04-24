@@ -18,7 +18,7 @@ header .mode {
 }
 header .container {
   width: 300px;
-  height: 90%;
+  height: 85%;
   background-color: #151434;
   padding: 15px;
   border-radius: 5px;
@@ -156,15 +156,16 @@ header .container .cul ul li:hover {
     opacity: 0%;
   }
 }
-@media (max-width: 400px) {
-  header .container {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-}
 @media (max-width: 1200px) {
   header .container {
-    height: 95%;
+    height: 95vh;
+  }
+}
+@media (max-width: 700px) {
+  header .container {
+    width: 100%;
+    height: 95vh;
+    border-radius: 0;
+    padding: 10px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
