@@ -33,7 +33,7 @@ header .container .alert {
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: rgba(21, 20, 52, 0.6980392157);
+  background-color: rgba(64, 61, 133, 0.6980392157);
   font-size: 17px;
   color: #fff;
   border-radius: 20px;
@@ -49,7 +49,7 @@ header .container .total {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 30px 140px 1fr;
+  grid-template-rows: 40px 90px 60px;
 }
 header .container .total .darkLightMode {
   display: flex;
@@ -78,6 +78,7 @@ header .container .total .string .text {
   font-size: 45px;
   color: #fa3;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 header .container .total .result {
   font-size: 35px;
@@ -92,11 +93,9 @@ header .container .total .bottom {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  align-items: end;
 }
 header .container .total .bottom .del:hover {
-  opacity: 70%;
-}
-header .container .total .bottom .storage:hover {
   opacity: 70%;
 }
 header .container .cul {
@@ -142,7 +141,7 @@ header .container .cul ul .equal span {
 header .container .cul ul .equal:hover {
   background-color: #fa3;
   color: #fff;
-  opacity: 90%;
+  filter: grayscale(30%);
 }
 header .container .cul ul li:hover {
   box-shadow: none;
